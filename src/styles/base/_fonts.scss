@@ -1,0 +1,11 @@
+@mixin font-face($font-family, $font-url, $font-weight: normal, $font-style: normal) {
+    @font-face {
+      font-family: '#{$font-family}';
+      src: url('#{$font-url}') format('woff2'),
+           url('#{$font-url}') format('woff'),
+           url('#{$font-url}') format('truetype');
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+  }
+  @include font-face('MyFont', '/assets/fonts/Montserrat-BlackItalic.ttf', 500, italic);
